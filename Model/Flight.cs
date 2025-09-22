@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppAirLineManagement.Model
 {
+//create flight class
     public class Flight
     {
+        //give fields / properties
         public int FlightId { get; set; }
         public int DepAirportId { get; set; }
         public int ArrAirportId { get; set; }
