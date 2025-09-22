@@ -16,7 +16,7 @@ namespace ConsoleAppAirLineManagement.Repository
         void UpdateFlight(Flight flight); // update flight
         void DeleteFlight(int flightId);// delete flight
 
-        List<Airport> GetAllAirports();
+        List<Airport> GetAllAirports(); //get all airports
     }
 
 }
