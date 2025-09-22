@@ -2,15 +2,17 @@
 
 namespace ConsoleAppAirLineManagement.Service
 {
+//Implement the interface class of Admin
     public class AdminServiceImpl : IAdminService
     {
+// Fields
         private readonly IAdminRepository _adminRepo;
-
+//Constructors
         public AdminServiceImpl(IAdminRepository adminRepo)
         {
             _adminRepo = adminRepo;
         }
-
+//Methods
         public bool Login(string username, string password)
         {
             // Optional: Add extra validation here before calling repository
