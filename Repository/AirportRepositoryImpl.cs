@@ -61,7 +61,7 @@ namespace ConsoleAppAirLineManagement.Repository
             }
             return airport;
         }
-//Add airport from the database
+//Add airport and stores to the database
         public void AddAirport(Airport airport)
         {
             using (SqlConnection con = new SqlConnection(connStr))
@@ -76,7 +76,7 @@ namespace ConsoleAppAirLineManagement.Repository
                 cmd.ExecuteNonQuery();
             }
         }
-//update airports from the database
+//update airports stores to the database
         public void UpdateAirport(Airport airport)
         {
             using (SqlConnection con = new SqlConnection(connStr))
@@ -92,7 +92,7 @@ namespace ConsoleAppAirLineManagement.Repository
                 cmd.ExecuteNonQuery();
             }
         }
-//delete airports from the database
+//delete airports in the database
         public void DeleteAirport(int airportId)
         {
             using (SqlConnection con = new SqlConnection(connStr))
