@@ -4,15 +4,17 @@ using System.Collections.Generic;
 
 namespace ConsoleAppAirLineManagement.Service
 {
+//Implement the interface of IFlightService
     public class FlightServiceImpl : IFlightService
     {
+//Fields
         private readonly IFlightRepository _flightRepo;
-
+//Constructors
         public FlightServiceImpl(IFlightRepository flightRepo)
         {
             _flightRepo = flightRepo;
         }
-
+//Methods
         // --- Flights ---
         public List<Flight> GetAllFlights()
         {
