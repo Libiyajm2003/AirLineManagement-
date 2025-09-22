@@ -7,8 +7,10 @@ using System.Collections.Generic;
 
 namespace ConsoleAppAirLineManagement
 {
+    //create class
     public class FlyWithMe
     {
+        //main method
         static void Main(string[] args)
         {
             // Initialize services
@@ -25,7 +27,7 @@ namespace ConsoleAppAirLineManagement
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("----- FLYWITHME AIRLINE ADMIN LOGIN -----");
             Console.ResetColor();
-
+//username
             string username;
             do
             {
@@ -34,7 +36,7 @@ namespace ConsoleAppAirLineManagement
                 if (!CustomValidation.IsValidUserName(username))
                     Console.WriteLine("Invalid username! Max 15 chars, letters, numbers, _ or . only.");
             } while (!CustomValidation.IsValidUserName(username));
-
+//password
             string password;
             do
             {
@@ -217,13 +219,14 @@ namespace ConsoleAppAirLineManagement
 
                 switch (choice)
                 {
+                        //get all airports
                     case "1":
                         List<Airport> airports = airportService.GetAllAirports();
                         Console.WriteLine("ID | Code | Name | City | Country");
                         foreach (var a in airports)
                             Console.WriteLine($"{a.AirportId} | {a.AirportCode} | {a.AirportName} | {a.City} | {a.Country}");
                         break;
-
+//add new airport
                     case "2":
                         Airport newAirport = new Airport();
                         Console.Write("Airport Code: ");
@@ -237,7 +240,7 @@ namespace ConsoleAppAirLineManagement
                         airportService.AddAirport(newAirport);
                         Console.WriteLine("Airport added successfully!");
                         break;
-
+//update airport
                     case "3":
                         int updateId = ReadPositiveInt("Enter Airport ID to update: ");
                         var airportToUpdate = airportService.GetAirportById(updateId);
@@ -259,7 +262,7 @@ namespace ConsoleAppAirLineManagement
                             Console.WriteLine("Airport not found!");
                         }
                         break;
-
+//delete airport
                     case "4":
                         int deleteId = ReadPositiveInt("Enter Airport ID to delete: ");
                         airportService.DeleteAirport(deleteId);
