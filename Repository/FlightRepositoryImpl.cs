@@ -5,11 +5,14 @@ using System.Collections.Generic;
 
 namespace ConsoleAppAirLineManagement.Repository
 {
+//Implementation of IFlightRepository to perform CRUD operations on TblFlight table
     public class FlightRepositoryImpl : IFlightRepository
     {
+    //Connection string to the SQL Server database
         private string connStr = @"Data Source=localhost;Initial Catalog=FlyWithMeDB;Integrated Security=True;TrustServerCertificate=True";
 
         // --- Flights ---
+        //get all flights from database
         public List<Flight> GetAllFlights()
         {
             List<Flight> flights = new List<Flight>();
@@ -39,7 +42,7 @@ namespace ConsoleAppAirLineManagement.Repository
             }
             return flights;
         }
-
+// get flights by id from database
         public Flight GetFlightById(int id)
         {
             Flight flight = null;
@@ -69,6 +72,7 @@ namespace ConsoleAppAirLineManagement.Repository
             }
             return flight;
         }
+        //add flight 
 
         public int AddFlight(Flight flight)
         {
@@ -98,7 +102,7 @@ namespace ConsoleAppAirLineManagement.Repository
                 return (int)outputId.Value;
             }
         }
-
+//update flights
         public void UpdateFlight(Flight flight)
         {
             using (SqlConnection con = new SqlConnection(connStr))
@@ -118,7 +122,7 @@ namespace ConsoleAppAirLineManagement.Repository
                 cmd.ExecuteNonQuery();
             }
         }
-
+// delete flight
         public void DeleteFlight(int id)
         {
             using (SqlConnection con = new SqlConnection(connStr))
