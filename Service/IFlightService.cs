@@ -15,7 +15,7 @@ namespace ConsoleAppAirLineManagement.Service
         void UpdateFlight(Flight flight); //update flight details
         void DeleteFlight(int id); //delete flight details
 
-        List<Airport> GetAllAirports();
+        List<Airport> GetAllAirports();// get all airports
     }
 
 }
