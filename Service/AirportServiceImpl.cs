@@ -4,15 +4,17 @@ using System.Collections.Generic;
 
 namespace ConsoleAppAirLineManagement.Service
 {
+//Implement the interface of IAirportService
     public class AirportServiceImpl : IAirportService
     {
+//Fields
         private readonly IAirportRepository _airportRepo;
-
+//Constructor
         public AirportServiceImpl(IAirportRepository airportRepo)
         {
             _airportRepo = airportRepo;
         }
-
+//Methods
         public List<Airport> GetAllAirports()
         {
             return _airportRepo.GetAllAirports();
