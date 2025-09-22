@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace ConsoleAppAirLineManagement
 {
-    //create class
+    //Create Main Class
     public class FlyWithMe
     {
         //main method
