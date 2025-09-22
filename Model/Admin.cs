@@ -9,7 +9,8 @@ namespace ConsoleAppAirLineManagement.Model
 // create admin class 
     public class Admin
     {
-        //fields / properties [used for login]
+        //fields / properties 
+        //used for login
         public int AdminId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
